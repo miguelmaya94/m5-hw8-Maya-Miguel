@@ -1,8 +1,8 @@
-var lossingmessg = ['You lost', 'Please play again', 'Sorry, you lost'];
-var messgarray= lossingmessg.length;
+var lossingmessg = ["You lost", "Lost, Please play again", "Sorry, you lost"];
+var randomItem = lossingmessg[Math.floor(Math.random() * lossingmessg.length)];
 
-var wins = 0;
-var losses = 0;
+var wins = 1;
+var losses = 1;
 
 var messag = document.getElementById('message')
 var win = document.getElementById('wins')
@@ -13,37 +13,39 @@ var loss = document.getElementById('losses')
 var allbox = document.querySelectorAll('.box')
   allbox.forEach(function(box) {
 
-box.onclick = function(e) {
-    //e.target.textContent
-    var newbox = e.target.textContent
-    
-    console.log(newbox)
-   
-     
+      box.onclick = function (e) {
+          //e.target.textContent
+          var newbox = e.target.textContent
+         
+
+          // console.log(newbox)
+          newbox = parseInt(newbox)
+
+          var randomwin = Math.floor(Math.random() * 3) + 1
+         
+
+          if (newbox === randomwin) {
 
 
+              document.getElementById("message").innerHTML = "You are a Winner";
+              document.getElementById("wins").innerHTML = "Wins:" + wins
 
-        var randomwin = Math.floor(Math.random() * 3) + 1
-    console.log(randomwin)
 
-    if (newbox === randomwin) {
-     
-
-        document.getElementById("message").innerHTML = "You are a Winner";
-        document.getElementById("message").textContent = "I have changed!";
+              wins++
+                           
           
-        document.getElementById("wins").innerHTML;
-        wins++
-       
-        }
-        else {
 
-        parseInt.lossingmessg = document.getElementById('message');
-            document.getElementById("losses").innerHTML;
-        losses++
-        
-        }
-    }
-})
+          }
+          else {
+             
 
+              document.getElementById("message").innerHTML = randomItem;
 
+              document.getElementById("losses").innerHTML = "losses:" + losses
+
+              losses++
+             
+
+          }
+      }
+  })
