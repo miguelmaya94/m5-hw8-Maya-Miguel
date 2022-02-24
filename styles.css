@@ -88,7 +88,7 @@ p, .score {
     }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 768px) {
 
     #box-1 {
         background-color: #FCFF00;
@@ -102,5 +102,10 @@ p, .score {
     #box-3 {
         background-color: #A5FF01;
         margin-left: 0px;
+    }
+
+    .box {
+        width: 20px;
+        font-size: 2rem;
     }
 }
