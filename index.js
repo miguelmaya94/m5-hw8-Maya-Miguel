@@ -33,7 +33,7 @@ var allbox = document.querySelectorAll('.box')
 
               wins++
                            
-          
+              
 
           }
           else {
@@ -44,8 +44,9 @@ var allbox = document.querySelectorAll('.box')
               document.getElementById("losses").innerHTML = "losses:" + losses
 
               losses++
-             
+            
 
           }
       }
+     
   })
