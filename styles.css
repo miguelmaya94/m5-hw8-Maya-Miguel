@@ -39,7 +39,7 @@ h1 {
 .box {
     border: 10px solid #6003C3;
     width: 120px;
-   
+   display:inline-block;
     padding: 60px ;
     text-align: center;
     vertical-align: middle;
@@ -88,7 +88,7 @@ p, .score {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 668px) {
 
     #box-1 {
         background-color: #FCFF00;
@@ -104,9 +104,12 @@ p, .score {
         margin-left: 0px;
     }
 
-    .box {
+    .boxes {
         width: 20px;
         font-size: 2rem;
         display:block;
+        margin-left:auto;
+        margin-right:auto;
+       
     }
 }
