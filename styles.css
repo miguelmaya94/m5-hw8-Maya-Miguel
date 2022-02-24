@@ -107,5 +107,6 @@ p, .score {
     .box {
         width: 20px;
         font-size: 2rem;
+        display:block;
     }
 }
