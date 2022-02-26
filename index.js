@@ -1,6 +1,4 @@
 var lossingmessg = ["You lost", "Lost, Please play again", "Sorry, you lost"];
-var randomItem = lossingmessg[Math.floor(Math.random() * lossingmessg.length)];
-
 var wins = 1;
 var losses = 1;
 
@@ -38,6 +36,8 @@ var allbox = document.querySelectorAll('.box')
           }
           else {
              
+              var randomItem = lossingmessg[Math.floor(Math.random() * lossingmessg.length)];
+
 
               document.getElementById("message").innerHTML = randomItem;
 
